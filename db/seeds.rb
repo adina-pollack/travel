@@ -5,3 +5,14 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+require 'httparty'
+
+Location.destroy_all
+
+response = HTTParty.get('https://restcountries.eu/rest/v1/all')
+location_data = JSON.parse(response.body)
+locations = location_data.map do |event|
+  c = Location.create!(country: event['name'])
+
+end
