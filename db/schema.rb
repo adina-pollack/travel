@@ -37,6 +37,7 @@ ActiveRecord::Schema.define(version: 20160807202024) do
     t.string   "provider"
     t.string   "uid"
     t.string   "name"
+    t.string   "email"
     t.string   "oauth_token"
     t.datetime "oauth_expires_at"
     t.integer  "location_id"

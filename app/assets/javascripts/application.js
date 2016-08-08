@@ -23,8 +23,11 @@ window.fbAsyncInit = function() {
     version    : 'v2.5' // use graph api version 2.5
   });
   FB.getLoginStatus(function(response) {
-    statusChangeCallback(response);
-  });
+    statusChangeCallback(response)
+    if (response.status === 'connected') {
+      var accessToken = response.authResponse.accessToken;
+    }
+  } );
 };
 (function(d, s, id) {
   var js, fjs = d.getElementsByTagName(s)[0];
@@ -75,9 +78,3 @@ function testAPI() {
     'Thanks for logging in, ' + response.name + '!';
   });
 };
-
-FB.getLoginStatus(function(response) {
-  if (response.status === 'connected') {
-    var accessToken = response.authResponse.accessToken;
-  } 
-} );

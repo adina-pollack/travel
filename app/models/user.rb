@@ -1,12 +1,28 @@
 class User < ApplicationRecord
-  def self.from_omniauth(auth)
-  where(auth.slice(:provider, :uid)).first_or_initialize.tap do |user|
-    user.provider = auth.provider
-    user.uid = auth.uid
-    user.name = auth.info.name
-    user.oauth_token = auth.credentials.token
-    user.oauth_expires_at = Time.at(auth.credentials.expires_at)
+  has_many :locations, through: :destinations
+  # def self.from_omniauth(auth)
+  # where(auth.slice(:provider, :uid)).first_or_initialize.tap do |user|
+  #   user.provider = auth.provider
+  #   user.uid = auth.uid
+  #   user.email = "#{auth['uid']}@#{auth['provider']}.com"
+  #   user.name = auth.info.name
+  #   user.oauth_token = auth.credentials.token
+  #   user.oauth_expires_at = Time.at(auth.credentials.expires_at)
+  #   user.save!
+  #   end
+  # end
+
+  def self.create_with_omniauth(auth)
+
+  user = find_or_create_by(uid: auth[‘uid’], provider:  auth[‘provider’])
+  user.email = “#{auth[‘uid’]}@#{auth[‘provider’]}.com”
+  user.password = auth[‘uid’]
+  user.name = auth[‘info’][‘name’]
+  if User.exists?(user)
+    user
+  else
     user.save!
-    end
+    user
   end
+end
 end
