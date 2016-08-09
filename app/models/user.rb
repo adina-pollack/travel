@@ -1,12 +1,9 @@
 class User < ApplicationRecord
-  def self.from_omniauth(auth)
-  where(auth.slice(:provider, :uid)).first_or_initialize.tap do |user|
-    user.provider = auth.provider
-    user.uid = auth.uid
-    user.name = auth.info.name
-    user.oauth_token = auth.credentials.token
-    user.oauth_expires_at = Time.at(auth.credentials.expires_at)
-    user.save!
-    end
-  end
+  has_many :locations, through: :destinations
+    attr_accessor :password
+    EMAIL_REGEX = /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i
+    validates :username, :presence => true, :uniqueness => true, :length => { :in => 3..20 }
+    validates :email, :presence => true, :uniqueness => true, :format => EMAIL_REGEX
+    validates :password, :confirmation => true #password_confirmation attr
+    validates_length_of :password, :in => 6..20, :on => :create
 end

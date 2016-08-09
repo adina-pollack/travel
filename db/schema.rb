@@ -34,14 +34,12 @@ ActiveRecord::Schema.define(version: 20160807202024) do
   end
 
   create_table "users", force: :cascade do |t|
-    t.string   "provider"
-    t.string   "uid"
     t.string   "name"
-    t.string   "oauth_token"
-    t.datetime "oauth_expires_at"
+    t.string   "email"
+    t.string   "password"
     t.integer  "location_id"
-    t.datetime "created_at",       null: false
-    t.datetime "updated_at",       null: false
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
     t.index ["location_id"], name: "index_users_on_location_id", using: :btree
   end
 
