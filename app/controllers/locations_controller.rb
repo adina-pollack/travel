@@ -10,7 +10,7 @@ class LocationsController < ApplicationController
   end
   def create
     @location = Location.create(location_params)
-    # redirect_to @user
+  ]
   end
 
 

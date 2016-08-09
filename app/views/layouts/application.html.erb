@@ -3,46 +3,18 @@
 <head>
   <title>Travel</title>
   <%= csrf_meta_tags %>
-
+  <link href="https://fonts.googleapis.com/css?family=Port+Lligat+Slab|Sofia" rel="stylesheet">
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
 </head>
 
 <body>
-  <script>
-  window.fbAsyncInit = function() {
-    FB.init({
-      appId      : '1002089086577512',
-      xfbml      : true,
-      version    : 'v2.7'
-    });
-  };
-
-  (function(d, s, id){
-    var js, fjs = d.getElementsByTagName(s)[0];
-    if (d.getElementById(id)) {return;}
-    js = d.createElement(s); js.id = id;
-    js.src = "//connect.facebook.net/en_US/sdk.js";
-    fjs.parentNode.insertBefore(js, fjs);
-  }
-  (document, 'script', 'facebook-jssdk'));
-  </script>
-  <div class="fb-login-button" data-max-rows="1" data-size="large" data-show-faces="false" data-auto-logout-link="true" data-scope="user_location"></div>
-
-  <div id="status">
+  <div class="userNav">
+    <% if @current_user %>
+      <%= link_to "Hey, #{@current_user.username}!", user_path(@current_user) %> |
+      <%= link_to "Sign Out", session_path, method: :delete %>
+    <% end %>
   </div>
-  <!-- <div>
-    <% if current_user %>
-    Signed in as <strong><%= current_user.name %></strong> - <%= image_tag(@auth['info']['image'])%>
-    <%= link_to "Sign out", signout_path, id: "sign_out" %>
-    <% else %>
-    <%= link_to "Sign in with Facebook", "/auth/facebook", id: "sign_in" %>
-    <% end %> -->
-  <!-- </div>
-  <% flash.each do |type, message| %>
-  <p class="<%= type %>"><%= message %></p>
-  <% end %> -->
-
   <%= yield %>
 </body>
 </html>
