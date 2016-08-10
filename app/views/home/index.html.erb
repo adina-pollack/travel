@@ -1,5 +1,5 @@
 <div class="welcome">
   <h1>Are you ready to travel?</h1>
-  <%=button_to 'Join Now!', new_user_path,  class: "signIn"%>
+  <button class="signIn"><%=link_to 'Join Now!', new_user_path%></button>
   <p>If you already have an account, please <%= link_to "Sign In.", new_session_path%></p>
 </div>

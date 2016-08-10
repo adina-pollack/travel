@@ -15,8 +15,17 @@
  */
 
 body{
+  background-image: url(art_asian_background3.jpg);
+  background-size: cover;
+}
+.homepage{
   background-image: url(sunrise.jpg);
   background-size: cover;
+  width: 100%;
+}
+.hero h1{
+  margin-top: 0px;
+  margin-bottom: 5px;
 }
 .welcome{
   float: right;
@@ -25,11 +34,14 @@ body{
   align-items: center;
   padding-right: 40px;
 }
+h1{
+  font-family: 'Give You Glory', cursive;
+}
 .welcome h1{
-  font-family: 'Sofia', cursive;
   font-size: 60px;
   color: #ffffff;
   margin-bottom: 7px;
+  margin-top: 7px;
 }
 .signIn{
   background-color: #EECFD5;
@@ -48,20 +60,19 @@ a:link{
   text-decoration: none;
 }
 @media screen and (max-width: 620px){
-  body{
+  .homepage{
     background-image: url(sunrise2.jpg);
   }
   .welcome{
     padding-right: 0px;
-    margin-right: 10px;
-    margin-left: 10px;
+    float: none;
   }
   .welcome h1{
     font-size: 35px;
   }
 }
 @media screen and (max-width: 750px){
-  body{
+  .homepage{
     background-image: url(sunrise2.jpg);
   }
 }

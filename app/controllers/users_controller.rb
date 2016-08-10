@@ -5,6 +5,8 @@ class UsersController < ApplicationController
 
   def new
     @user = User.new
+    @location = @user.locations.build
+    @location_options = Location.all.map { |l| [l.country, l.id]}
   end
 
   def create
@@ -32,7 +34,8 @@ class UsersController < ApplicationController
 
   private
   def user_params
-    params.require(:user).permit(:username, :password, :email)
+    params.require(:user).permit(:username, :password, :first_name, :email, :last_name,
+      :location_attributes => [:location_id])
   end
 
 end

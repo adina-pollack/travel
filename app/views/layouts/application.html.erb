@@ -3,18 +3,26 @@
 <head>
   <title>Travel</title>
   <%= csrf_meta_tags %>
-  <link href="https://fonts.googleapis.com/css?family=Port+Lligat+Slab|Sofia" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Give+You+Glory|Port+Lligat+Slab" rel="stylesheet">
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
 </head>
 
-<body>
+<body class="<%= @home_page ? 'homepage' : ''%>">
+
+
+  <div class="hero">
+    <h1> Make Friends, Will Travel</h1>
+  </div>
   <div class="userNav">
     <% if @current_user %>
       <%= link_to "Hey, #{@current_user.username}!", user_path(@current_user) %> |
       <%= link_to "Sign Out", session_path, method: :delete %>
     <% end %>
   </div>
+  <% flash.each do |type, message| %>
+  <p class="<%= type %>"><%= message %></p>
+  <% end %>
   <%= yield %>
 </body>
 </html>

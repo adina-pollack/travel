@@ -1,9 +1,20 @@
+<h2>Tell us a little about you about you:</h2>
 <%= form_for @user do |f| %>
   <%= f.label :first_name %>
   <%= f.text_field :first_name %>
 
   <%= f.label :last_name %>
   <%= f.text_field :last_name %>
+
+  <%= f.fields_for :location do |l|%>
+<div class="field">
+  <%= l.label :where_do_you_currently_live? %>
+  <%= select_tag(:location_id, options_for_select(@location_options)) %>
+</div>
+<% end %>
+
+  <%= f.label :username %>
+  <%= f.text_field :username %>
 
   <%= f.label :email %>
   <%= f.text_field :email %>
