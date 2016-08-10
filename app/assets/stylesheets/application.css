@@ -97,10 +97,11 @@ select{
   font-size: 18px;
   font-family: 'Arial', sans-serif;
 }
-@media screen and (device-max-width: 620px){
+@media screen and (max-width: 620px){
   body{
     display: flex;
     flex-direction: column;
+    justify-content: center;
   }
   .homepage{
     background-image: url(sunrise2.jpg);
