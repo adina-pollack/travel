@@ -10,8 +10,10 @@ class UsersController < ApplicationController
   end
 
   def create
-    @user = User.create(user_params)
+    @user = User.create!(user_params)
     session[:user_id] = @user.id
+    @user.locations << Location.find(params[:location_id])
+    @user.save!
     redirect_to user_path(@user)
   end
 
@@ -35,7 +37,7 @@ class UsersController < ApplicationController
   private
   def user_params
     params.require(:user).permit(:username, :password, :first_name, :email, :last_name,
-      :location_attributes => [:location_id])
+    :location_id)
   end
 
 end

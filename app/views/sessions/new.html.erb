@@ -1,8 +1,15 @@
-<h2>Sign In</h2>
-<%= form_for @user, url: session_path, method: :post do |f| %>
+<div class="newForm">
+<h2>Welcome back! Please sign in:</h2>
+<%= form_for @user, url: new_session_path, method: :post do |f| %>
+<p>
 <%= f.label :username%>
 <%= f.text_field :username %>
-
+</p>
+<p>
 <%= f.label :password %>
-<%= f.password_field :password %> <%= f.submit "Submit" , :class => "submit" %>
+<%= f.password_field :password %>
+</p>
+
+<%= f.submit "Enter" , :class => "submit" %>
 <% end %>
+</div>

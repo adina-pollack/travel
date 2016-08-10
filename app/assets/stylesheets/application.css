@@ -17,6 +17,8 @@
 body{
   background-image: url(art_asian_background3.jpg);
   background-size: cover;
+  display: flex;
+  flex-direction: column;
 }
 .homepage{
   background-image: url(sunrise.jpg);
@@ -72,15 +74,16 @@ form{
   padding: 10px;
   font-size: 30px;
 }
-.newUser{
+.newForm{
   width: 800px;
   margin: 0 auto;
   margin-top: 45px;
+  margin-bottom: 30px;
   background-color: #FFFDFE;
   border: 3px solid #7B776E;
   font-family: 'Give You Glory', cursive;
 }
-.newUser h2{
+.newForm h2{
   padding: 10px;
   font-size: 35px;
 }
@@ -94,6 +97,10 @@ select{
   font-family: 'Arial', sans-serif;
 }
 @media screen and (max-width: 620px){
+  body{
+    display: flex;
+    flex-direction: column;
+  }
   .homepage{
     background-image: url(sunrise2.jpg);
   }
@@ -108,10 +115,10 @@ select{
     font-size: 30px;
     text-align: center;
   }
-  .newUser{
+  .newForm{
       width: 100%;
   }
-  .newUser h2{
+  .newForm h2{
     font-size: 25px;
   }
   form{
