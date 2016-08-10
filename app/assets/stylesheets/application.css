@@ -17,8 +17,8 @@
 body{
   background-image: url(art_asian_background3.jpg);
   background-size: cover;
-  display: flex;
-  flex-direction: column;
+  /*display: flex;
+  flex-direction: column;*/
 }
 .homepage{
   background-image: url(sunrise.jpg);
@@ -39,9 +39,9 @@ body{
   visibility: hidden;
 }
 .welcome{
-  float: right;
   display: flex;
   flex-direction: column;
+  float: right;
   align-items: center;
   padding-right: 40px;
 }
@@ -62,6 +62,7 @@ h1{
   box-shadow: 2px 2px 0px rgba(0, 0, 0, 0.4);
   font-size: 24px;
   font-family: 'Port Lligat Slab', serif;
+
 }
 .welcome p{
   font-family: 'Port Lligat Slab', serif;
@@ -96,7 +97,7 @@ select{
   font-size: 18px;
   font-family: 'Arial', sans-serif;
 }
-@media screen and (max-width: 620px){
+@media screen and (device-max-width: 620px){
   body{
     display: flex;
     flex-direction: column;
