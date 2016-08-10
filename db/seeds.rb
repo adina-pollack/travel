@@ -19,5 +19,4 @@ locations = location_data.map do |event|
 end
 
 User.create([
-  {first_name: "Adina", last_name: "Pollack", username: "pollacaf", email: "adinap16@gmail.com", password: "adina", location: Location.last}
-  ])
+  {first_name: "Adina", last_name: "Pollack", username: "pollacaf", email: "adinap16@gmail.com", password: "adina"}
