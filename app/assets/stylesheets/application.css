@@ -109,9 +109,16 @@ select{
   .welcome{
     padding-right: 0px;
     float: none;
+    margin-top: 0px;
   }
   .welcome h1{
-    font-size: 35px;
+    font-size: 30px;
+  }
+  .welcome p{
+    color: #ffffff;
+  }
+  .hero{
+    margin: 0;
   }
   .hero h1{
     font-size: 30px;
@@ -121,6 +128,10 @@ select{
       width: 100%;
   }
   .newForm h2{
+    font-size: 25px;
+  }
+  .title{
+    margin: 0;
     font-size: 25px;
   }
   form{
