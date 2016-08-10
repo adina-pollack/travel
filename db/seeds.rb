@@ -20,3 +20,4 @@ end
 
 User.create([
   {first_name: "Adina", last_name: "Pollack", username: "pollacaf", email: "adinap16@gmail.com", password: "adina"}
+  ])
