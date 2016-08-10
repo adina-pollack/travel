@@ -1,29 +1,40 @@
-<h2>Tell us a little about you about you:</h2>
+<div class="newUser">
+<h2>Tell us a little about yourself:</h2>
+
 <%= form_for @user do |f| %>
+<p>
   <%= f.label :first_name %>
   <%= f.text_field :first_name %>
-
+</p>
+<p>
   <%= f.label :last_name %>
   <%= f.text_field :last_name %>
+</p>
 
-  <%= f.fields_for :location do |l|%>
+<%= f.fields_for :location do |l|%>
 <div class="field">
-  <%= l.label :where_do_you_currently_live? %>
-  <%= select_tag(:location_id, options_for_select(@location_options)) %>
+  <p>
+    <%= l.label :where_do_you_currently_live? %>
+    <%= select_tag(:location_id, options_for_select(@location_options))%>
+  </p>
 </div>
 <% end %>
-
+<p>
   <%= f.label :username %>
   <%= f.text_field :username %>
-
+</p>
+<p>
   <%= f.label :email %>
   <%= f.text_field :email %>
-
+</p>
+<p>
   <%= f.label :password %>
   <%= f.password_field :password %>
-
+</p>
+<p>
   <%= f.label :password_confirmation %>
   <%= f.password_field :password_confirmation %>
-
-  <%= f.submit "Submit", :class => "submit" %>
-<% end %>
+  <p>
+    <%= f.submit "Submit", :class => "submit" %>
+  <% end %>
+  </div>

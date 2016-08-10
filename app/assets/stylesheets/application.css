@@ -23,9 +23,18 @@ body{
   background-size: cover;
   width: 100%;
 }
+.hero{
+  background-color: #EF836A;
+  width: 100%;
+}
 .hero h1{
   margin-top: 0px;
   margin-bottom: 5px;
+  font-size: 40px;
+  color: #ffffff;
+}
+.title{
+  visibility: hidden;
 }
 .welcome{
   float: right;
@@ -59,6 +68,31 @@ h1{
 a:link{
   text-decoration: none;
 }
+form{
+  padding: 10px;
+  font-size: 30px;
+}
+.newUser{
+  width: 800px;
+  margin: 0 auto;
+  margin-top: 45px;
+  background-color: #FFFDFE;
+  border: 3px solid #7B776E;
+  font-family: 'Give You Glory', cursive;
+}
+.newUser h2{
+  padding: 10px;
+  font-size: 35px;
+}
+.submit{
+  font-family: 'Give You Glory', cursive;
+  width: 150px;
+  font-size: 25px;
+}
+select{
+  font-size: 18px;
+  font-family: 'Arial', sans-serif;
+}
 @media screen and (max-width: 620px){
   .homepage{
     background-image: url(sunrise2.jpg);
@@ -69,6 +103,26 @@ a:link{
   }
   .welcome h1{
     font-size: 35px;
+  }
+  .hero h1{
+    font-size: 30px;
+    text-align: center;
+  }
+  .newUser{
+      width: 100%;
+  }
+  .newUser h2{
+    font-size: 25px;
+  }
+  form{
+    font-size: 20px;
+  }
+  select{
+    font-size: 14px;
+  }
+  .submit{
+    font-size: 18px;
+    width: 100px;
   }
 }
 @media screen and (max-width: 750px){

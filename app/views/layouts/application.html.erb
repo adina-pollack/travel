@@ -11,8 +11,8 @@
 <body class="<%= @home_page ? 'homepage' : ''%>">
 
 
-  <div class="hero">
-    <h1> Make Friends, Will Travel</h1>
+  <div class="<%= ! @home_page ? 'hero' : ''%>">
+    <h1 class="<%= @home_page ? 'title' : '' %>"> Make Friends, Will Travel</h1>
   </div>
   <div class="userNav">
     <% if @current_user %>

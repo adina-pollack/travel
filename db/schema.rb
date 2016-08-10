@@ -26,7 +26,6 @@ ActiveRecord::Schema.define(version: 20160807202024) do
 
   create_table "locations", force: :cascade do |t|
     t.string   "country"
-    t.string   "city"
     t.integer  "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -42,6 +41,7 @@ ActiveRecord::Schema.define(version: 20160807202024) do
     t.integer  "location_id"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
+    t.index ["location_id"], name: "index_users_on_location_id", using: :btree
   end
 
 end

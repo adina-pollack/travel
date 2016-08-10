@@ -9,6 +9,7 @@
 require 'httparty'
 
 Location.destroy_all
+User.destroy_all
 
 response = HTTParty.get('https://restcountries.eu/rest/v1/all')
 location_data = JSON.parse(response.body)
@@ -16,3 +17,7 @@ locations = location_data.map do |event|
   c = Location.create!(country: event['name'])
 
 end
+
+User.create([
+  {first_name: "Adina", last_name: "Pollack", username: "pollacaf", email: "adinap16@gmail.com", password: "adina", location_id: Location.last}
+  ])
