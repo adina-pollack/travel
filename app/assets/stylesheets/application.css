@@ -67,6 +67,7 @@ h1{
 .welcome p{
   font-family: 'Port Lligat Slab', serif;
   font-size: 18px;
+  color: #ffffff;
 }
 a:link{
   text-decoration: none;
@@ -113,9 +114,6 @@ select{
   }
   .welcome h1{
     font-size: 30px;
-  }
-  .welcome p{
-    color: #ffffff;
   }
   .hero{
     margin: 0;
