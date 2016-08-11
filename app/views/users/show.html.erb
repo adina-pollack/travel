@@ -1,1 +1,6 @@
-<h2>Show Page</h2>
+<div class="userShow">
+  <% if @current_user %>
+    <h2>Welcome <%= @current_user.first_name %>! <span class="smaller"><%= link_to("(edit account)", edit_user_path(@current_user)) if @current_user == @user %></span></h2>
+    <p>Current Location: <%= %></p>
+  <% end %>
+</div>

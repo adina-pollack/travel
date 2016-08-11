@@ -14,13 +14,14 @@
 
   <div class="<%= ! @home_page ? 'hero' : ''%>">
     <h1 class="<%= @home_page ? 'title' : '' %>"> Make Friends, Will Travel</h1>
+    <h2>
+      <% if @current_user %>
+        <%= link_to "Hey, #{@current_user.first_name}!", user_path(@current_user) %> |
+        <%= link_to "Sign Out", session_path, method: :delete %>
+      <% end %>
+    </h2>
   </div>
-  <div class="userNav">
-    <% if @current_user %>
-      <%= link_to "Hey, #{@current_user.username}!", user_path(@current_user) %> |
-      <%= link_to "Sign Out", session_path, method: :delete %>
-    <% end %>
-  </div>
+
   <% flash.each do |type, message| %>
   <p class="<%= type %>"><%= message %></p>
   <% end %>

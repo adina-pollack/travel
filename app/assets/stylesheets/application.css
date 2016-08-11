@@ -28,13 +28,25 @@ body{
 .hero{
   background-color: #EF836A;
   width: 100%;
+  display: flex;
+  flex-direction: row;
 }
 .hero h1{
   margin-top: 0px;
   margin-bottom: 2px;
   font-size: 40px;
   color: #ffffff;
+  flex-grow: 3;
 }
+.hero h2{
+  flex-grow: 1;
+  text-align: right;
+  margin-right: 10px;
+  font-family: 'Give You Glory', cursive;
+  margin-bottom: 0px;
+  margin-top: 0px;
+}
+
 .title{
   visibility: hidden;
 }
@@ -98,6 +110,23 @@ select{
   font-size: 18px;
   font-family: 'Arial', sans-serif;
 }
+.userShow{
+  width: 800px;
+  margin: 0 auto;
+  margin-top: 45px;
+  margin-bottom: 30px;
+  background-color: #FFFDFE;
+  border: 3px solid #7B776E;
+  font-family: 'Give You Glory', cursive;
+  padding-left:10px;
+}
+.userShow h2{
+  font-size: 35px;
+}
+span{
+  font-size: 24px;
+}
+
 @media screen and (max-width: 620px){
   body{
     display: flex;
@@ -143,6 +172,7 @@ select{
     width: 100px;
   }
 }
+
 /*@media screen and (max-width: 750px){
   .homepage{
     background-image: url(sunrise2.jpg);
