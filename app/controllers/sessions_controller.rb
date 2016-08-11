@@ -10,7 +10,7 @@ class SessionsController < ApplicationController
       if @user.password === params[:user][:password]
         session[:user_id] = @user.id
         cookies[:username] = {value: @user.username, expires: 1.minute.from_now}
-        redirect_to root_path
+        redirect_to user_path(@user)
       else
         flash[:alert] = "Wrong password!"
         redirect_to new_session_path

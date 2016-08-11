@@ -42,6 +42,7 @@ body{
   flex-grow: 1;
   text-align: right;
   margin-right: 10px;
+  font-size: 25px;
   font-family: 'Give You Glory', cursive;
   margin-bottom: 0px;
   margin-top: 0px;
@@ -66,11 +67,13 @@ h1{
   margin-bottom: 5px;
   margin-top: 7px;
 }
+button, .submit{
+  border-radius: 20%;
+}
 .signIn{
   background-color: #EECFD5;
   width: 150px;
   height: 60px;
-  border-radius: 20%;
   box-shadow: 2px 2px 0px rgba(0, 0, 0, 0.4);
   font-size: 24px;
   font-family: 'Port Lligat Slab', serif;
@@ -100,11 +103,13 @@ form{
 .newForm h2{
   padding: 10px;
   font-size: 35px;
+  margin-bottom: 0px;
 }
 .submit{
   font-family: 'Give You Glory', cursive;
   width: 150px;
   font-size: 25px;
+  margin-bottom: 15px;
 }
 select{
   font-size: 18px;
@@ -122,6 +127,21 @@ select{
 }
 .userShow h2{
   font-size: 35px;
+}
+.userShow p{
+  font-size: 25px;
+}
+.userShow button{
+  background-color: #A5C0B4;
+  width: 225px;
+  height: 60px;
+  box-shadow: 2px 2px 0px rgba(0, 0, 0, 0.4);
+  font-size: 24px;
+  font-family:'Give You Glory', cursive;
+  margin-bottom: 20px;
+}
+.userShow button a{
+  color: black;
 }
 span{
   font-size: 24px;
@@ -146,10 +166,16 @@ span{
   }
   .hero{
     margin: 0;
+    flex-direction: column;
   }
   .hero h1{
     font-size: 30px;
     text-align: center;
+    flex-grow: 0;
+  }
+  .hero h2{
+    flex-grow: 0;
+    font-size: 18px;
   }
   .newForm{
       width: 100%;
@@ -170,6 +196,20 @@ span{
   .submit{
     font-size: 18px;
     width: 100px;
+  }
+  .userShow{
+    width: 100%;
+    margin-left: 0px;
+  }
+  .userShow h2{
+    font-size: 25px;
+  }
+  .userShow p{
+    font-size: 18px;
+  }
+  .userShow button{
+    font-size: 20px;
+    width: 200px;
   }
 }
 

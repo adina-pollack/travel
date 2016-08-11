@@ -1,5 +1,5 @@
 <div class="newForm">
-<h2>Tell us a little about yourself:</h2>
+<h2>Edit:</h2>
 
 <%= form_for @user do |f| %>
 <p>
@@ -30,10 +30,6 @@
 <p>
   <%= f.label :password %>
   <%= f.password_field :password %>
-</p>
-<p>
-  <%= f.label :password_confirmation %>
-  <%= f.password_field :password_confirmation %>
 </p>
     <%= f.submit "Submit", :class => "submit" %>
   <% end %>

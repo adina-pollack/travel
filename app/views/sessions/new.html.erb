@@ -1,6 +1,10 @@
 <div class="newForm">
+
+  <% flash.each do |type, message| %>
+  <p class="<%= type %>"><%= message %></p>
+  <% end %>
 <h2>Welcome back! Please sign in:</h2>
-<%= form_for @user, url: new_session_path, method: :post do |f| %>
+<%= form_for @user, url: session_path, method: :post do |f| %>
 <p>
 <%= f.label :username%>
 <%= f.text_field :username %>
