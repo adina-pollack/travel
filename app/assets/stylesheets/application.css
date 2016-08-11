@@ -149,6 +149,9 @@ span{
 .locationShow li{
   font-size: 30px;
 }
+#messages{
+  font-family: 'Arial', sans-serif;
+}
 
 @media screen and (max-width: 620px){
   body{

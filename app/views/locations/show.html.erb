@@ -7,4 +7,18 @@
 </li>
 <% end %>
 
+<div>
+  <% if @location.messages.any? %>
+    <div id="messages">
+      <%= render partial: 'messages/message', collection: @location.messages%>
+    </div>
+  <%else%>
+    <div class=id="messages">
+    </div>
+  <%end%>
+</div>
+
+  <%= render partial: 'messages/message_form', locals: {message: @message, location: @location}%>
+</div>
+
 </div>

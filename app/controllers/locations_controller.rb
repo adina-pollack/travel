@@ -9,6 +9,8 @@ class LocationsController < ApplicationController
   end
   def show
     @location = Location.find(params[:id])
+    @message = Message.new
+
   end
 
 

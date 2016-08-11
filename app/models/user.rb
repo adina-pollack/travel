@@ -1,7 +1,7 @@
 class User < ApplicationRecord
-  has_many :destinations
-  has_many :locations, through: :destinations
-
+  has_many :messages
+  has_many :locations, through: :messages
+  validates :username, presence: true, uniqueness: true
 
     # attr_accessor :password
     # # # EMAIL_REGEX = /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i

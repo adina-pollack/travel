@@ -1,8 +1,8 @@
 class Location < ApplicationRecord
-  has_many :destinations
-  has_many :users, through: :destinations
+  has_many :messages
+  has_many :users, through: :messages
 
   def self.search(search)
-    where("country ILIKE ?", "%#{search}%") 
+    where("country ILIKE ?", "%#{search}%")
   end
 end
