@@ -24,13 +24,18 @@ class UsersController < ApplicationController
 
   def edit
     @user = User.find(params[:id])
+
+    @location_options = Location.all.map { |l| [l.country, l.id]}
     redirect_to root_path unless @current_user == @user
   end
 
   def update
     @user = User.find(params[:id])
+    @user.locations << Location.find(params[:location_id])
     redirect_to root_path unless @current_user == @user
-    @user.update(user_params)
+
+
+    @user.update!(user_params)
     redirect_to user_path(@user)
   end
 

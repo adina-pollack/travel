@@ -1,0 +1,14 @@
+<div class="locationIndex">
+<h2>Where do you want to go?</h2>
+
+<%= form_tag(locations_path, :method => "get", id: "search-form") do %>
+<%= text_field_tag :search, params[:search], placeholder: "Country" %>
+<%= submit_tag "Search", :country => nil %>
+<% end %>
+
+
+ <% @locations.each do |location| %>
+   <h3><%= link_to "#{location.country}", location_path(location) %></h3>
+   <% end %>
+
+</div>

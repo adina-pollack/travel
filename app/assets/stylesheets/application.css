@@ -91,7 +91,10 @@ form{
   padding: 10px;
   font-size: 30px;
 }
-.newForm{
+form input{
+  font-size: 16px;
+}
+.newForm, .userShow, .locationIndex, .locationShow{
   width: 800px;
   margin: 0 auto;
   margin-top: 45px;
@@ -115,18 +118,15 @@ select{
   font-size: 18px;
   font-family: 'Arial', sans-serif;
 }
-.userShow{
-  width: 800px;
-  margin: 0 auto;
-  margin-top: 45px;
-  margin-bottom: 30px;
-  background-color: #FFFDFE;
-  border: 3px solid #7B776E;
-  font-family: 'Give You Glory', cursive;
+.userShow, .locationIndex, .locationShow{
   padding-left:10px;
 }
-.userShow h2{
+.userShow, .locationIndex, .locationShow h2{
   font-size: 35px;
+}
+
+.locationIndex h3{
+  font-size: 28px;
 }
 .userShow p{
   font-size: 25px;
@@ -145,6 +145,9 @@ select{
 }
 span{
   font-size: 24px;
+}
+.locationShow li{
+  font-size: 30px;
 }
 
 @media screen and (max-width: 620px){
@@ -197,14 +200,14 @@ span{
     font-size: 18px;
     width: 100px;
   }
-  .userShow{
+  .userShow, .locationIndex, .locationShow{
     width: 100%;
     margin-left: 0px;
   }
-  .userShow h2{
+  .userShow, .locationIndex, .locationShow h2{
     font-size: 25px;
   }
-  .userShow p{
+  .userShow, .locationIndex, .locationShow p{
     font-size: 18px;
   }
   .userShow button{

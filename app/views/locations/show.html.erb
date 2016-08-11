@@ -1,0 +1,10 @@
+<div class="locationShow">
+<h2>Members in <%= @location.country%>:</h2>
+
+<%@location.users.each do  |user|%>
+<li>
+  <%=user.first_name %>
+</li>
+<% end %>
+
+</div>
