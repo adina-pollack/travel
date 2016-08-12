@@ -10,7 +10,7 @@
 </ul>
 
 
-<div>
+<div class="chat">
   <% if @location.messages.any? %>
     <div id="messages">
       <%= render partial: 'messages/message', collection: @location.messages%>

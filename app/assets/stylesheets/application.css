@@ -172,6 +172,15 @@ span{
 }
 #messages{
   font-family: 'Arial', sans-serif;
+  padding-left: 7px;
+}
+.chat{
+  width: 700px;
+  margin: 0 auto;
+  border: 2px solid #7B776E;
+  background-color: #ffffff;
+  margin-top: 40px;
+  margin-bottom: 20px;
 }
 
 @media screen and (max-width: 620px){
@@ -194,6 +203,7 @@ span{
   .hero{
     margin: 0;
     flex-direction: column;
+    margin-left: 5px;
   }
   .hero h1{
     font-size: 30px;
@@ -227,6 +237,7 @@ span{
   .userShow, .locationIndex, .locationShow{
     width: 100%;
     margin-left: 0px;
+    padding-right: 10px;
   }
   .userShow, .locationIndex, .locationShow h2{
     font-size: 25px;
@@ -240,6 +251,9 @@ span{
   }
   span{
     font-size: 16px;
+  }
+  .chat{
+    width: 100%;
   }
 }
 
