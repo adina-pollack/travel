@@ -1,4 +1,5 @@
 <div class="locationShow">
+<button><%= link_to "Back to Countries", locations_path %></button>
 <h2>Members in <%= @location.country%>:</h2>
 
 <ul>
@@ -8,6 +9,7 @@
   </li>
   <% end %>
 </ul>
+
 
 
 <div class="chat">
@@ -22,7 +24,5 @@
 </div>
 
   <%= render partial: 'messages/message_form', locals: {message: @message, location: @location}%>
-
-  <button><%= link_to "Back to Countries", locations_path %></button>
 
 </div>

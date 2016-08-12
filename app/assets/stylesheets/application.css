@@ -147,6 +147,9 @@ select{
 span{
   font-size: 24px;
 }
+.locationShow h2{
+  margin-top: 15px;
+}
 .locationShow li{
   font-size: 30px;
 }
@@ -157,7 +160,7 @@ span{
   box-shadow: 2px 2px 0px rgba(0, 0, 0, 0.4);
   font-size: 18px;
   font-family:'Give You Glory', cursive;
-  margin-bottom: 20px;
+  margin-top: 20px;
 }
 .locationShow button a{
   color: black;
