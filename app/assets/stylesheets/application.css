@@ -258,6 +258,9 @@ span{
   .chat{
     width: 100%;
   }
+  .locationShow button{
+    font-size: 14px;
+  }
 }
 
 /*@media screen and (max-width: 750px){
