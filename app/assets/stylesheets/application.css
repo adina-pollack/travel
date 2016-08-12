@@ -67,7 +67,7 @@ h1{
   margin-bottom: 5px;
   margin-top: 7px;
 }
-button, .submit{
+button, .submit, .submitMessage{
   border-radius: 20%;
 }
 .signIn{
@@ -113,6 +113,7 @@ form input{
   width: 150px;
   font-size: 25px;
   margin-bottom: 15px;
+  background-color: #A5C0B4;
 }
 select{
   font-size: 18px;
@@ -148,6 +149,26 @@ span{
 }
 .locationShow li{
   font-size: 30px;
+}
+.locationShow button{
+  background-color: #A5C0B4;
+  width: 175px;
+  height: 50px;
+  box-shadow: 2px 2px 0px rgba(0, 0, 0, 0.4);
+  font-size: 18px;
+  font-family:'Give You Glory', cursive;
+  margin-bottom: 20px;
+}
+.locationShow button a{
+  color: black;
+}
+.submitMessage{
+  font-family: 'Give You Glory', cursive;
+  width: 75px;
+  height: 30px;
+  font-size: 20px;
+  margin-bottom: 15px;
+  background-color: #A5C0B4;
 }
 #messages{
   font-family: 'Arial', sans-serif;
@@ -216,6 +237,9 @@ span{
   .userShow button{
     font-size: 20px;
     width: 200px;
+  }
+  span{
+    font-size: 16px;
   }
 }
 

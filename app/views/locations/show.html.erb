@@ -1,11 +1,14 @@
 <div class="locationShow">
 <h2>Members in <%= @location.country%>:</h2>
 
-<%@location.users.each do  |user|%>
-<li>
-  <%=user.first_name %>
-</li>
-<% end %>
+<ul>
+  <%@location.users.distinct.each do  |user|%>
+  <li>
+    <%=user.first_name %>
+  </li>
+  <% end %>
+</ul>
+
 
 <div>
   <% if @location.messages.any? %>
@@ -19,6 +22,7 @@
 </div>
 
   <%= render partial: 'messages/message_form', locals: {message: @message, location: @location}%>
-</div>
+
+  <button><%= link_to "Back to Countries", locations_path %></button>
 
 </div>
